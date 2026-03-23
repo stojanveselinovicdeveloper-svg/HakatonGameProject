@@ -12,6 +12,7 @@
   "Folders":[
     {"$GMFolder":"","%Name":"ArtSource","folderPath":"folders/ArtSource.yy","name":"ArtSource","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Fonts","folderPath":"folders/ArtSource/Fonts.yy","name":"Fonts","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Sprites","folderPath":"folders/ArtSource/Sprites.yy","name":"Sprites","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"AudioSources","folderPath":"folders/AudioSources.yy","name":"AudioSources","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Docs","folderPath":"folders/Docs.yy","name":"Docs","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Exports","folderPath":"folders/Exports.yy","name":"Exports","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -38,7 +39,9 @@
   "ForcedPrefabProjectReferences":[
     {"link":"io.gamemaker.sdfshaders-1.0.0","name":"io.gamemaker.sdfshaders-1.0.0","path":"io.gamemaker.sdfshaders-1.0.0.yyp",},
   ],
-  "IncludedFiles":[],
+  "IncludedFiles":[
+    {"$GMIncludedFile":"","%Name":"hospital hallway pik.pdf","CopyToMask":-1,"filePath":"datafiles","name":"hospital hallway pik.pdf","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+  ],
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
@@ -47,10 +50,14 @@
   "name":"SerbianHospital",
   "resources":[
     {"id":{"name":"fnt_main_regular","path":"fonts/fnt_main_regular/fnt_main_regular.yy",},},
+    {"id":{"name":"fnt_press_start_menu","path":"fonts/fnt_press_start_menu/fnt_press_start_menu.yy",},},
+    {"id":{"name":"fnt_press_start","path":"fonts/fnt_press_start/fnt_press_start.yy",},},
     {"id":{"name":"obj_base_button","path":"objects/obj_base_button/obj_base_button.yy",},},
+    {"id":{"name":"obj_button_start","path":"objects/obj_button_start/obj_button_start.yy",},},
     {"id":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},},
     {"id":{"name":"rm_tuto","path":"rooms/rm_tuto/rm_tuto.yy",},},
-    {"id":{"name":"Sprite1","path":"sprites/Sprite1/Sprite1.yy",},},
+    {"id":{"name":"spr_bg","path":"sprites/spr_bg/spr_bg.yy",},},
+    {"id":{"name":"spr_button","path":"sprites/spr_button/spr_button.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
