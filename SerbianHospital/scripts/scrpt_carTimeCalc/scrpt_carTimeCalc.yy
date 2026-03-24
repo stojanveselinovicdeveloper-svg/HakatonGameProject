@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrpt_carTimeCalc",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrpt_carTimeCalc",
+  "parent":{
+    "name":"DispatchScript",
+    "path":"folders/Scripts/DispatchScript.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
