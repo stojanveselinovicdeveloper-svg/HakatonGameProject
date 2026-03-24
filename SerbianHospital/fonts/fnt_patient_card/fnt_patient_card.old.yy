@@ -1,6 +1,6 @@
 {
   "$GMFont":"",
-  "%Name":"fnt_press_start",
+  "%Name":"fnt_press_start_1",
   "AntiAlias":1,
   "applyKerning":0,
   "ascender":17,
@@ -902,7 +902,7 @@
   "last":0,
   "lineHeight":22,
   "maintainGms1Font":false,
-  "name":"fnt_press_start",
+  "name":"fnt_press_start_1",
   "parent":{
     "name":"Fonts",
     "path":"folders/ArtSource/Fonts.yy",
