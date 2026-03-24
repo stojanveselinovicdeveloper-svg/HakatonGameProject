@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scrpt_buttonTabDraw",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scrpt_buttonTabDraw",
+  "parent":{
+    "name":"DispatchScript",
+    "path":"folders/Scripts/DispatchScript.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
