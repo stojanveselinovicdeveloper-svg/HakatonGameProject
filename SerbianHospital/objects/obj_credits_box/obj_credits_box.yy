@@ -1,16 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"credits",
+  "%Name":"obj_credits_box",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"credits",
+  "name":"obj_credits_box",
   "overriddenProperties":[],
   "parent":{
-    "name":"UI",
-    "path":"folders/Objects/UI.yy",
+    "name":"Credits",
+    "path":"folders/Objects/UI/Credits.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -1,15 +1,17 @@
 {
   "$GMObject":"",
   "%Name":"obj_button_options",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"obj_button_options",
   "overriddenProperties":[
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_base_button","path":"objects/obj_base_button/obj_base_button.yy",},"propertyId":{"name":"button_text","path":"objects/obj_base_button/obj_base_button.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Options",},
   ],
   "parent":{
-    "name":"UI",
-    "path":"folders/Objects/UI.yy",
+    "name":"Menu",
+    "path":"folders/Objects/UI/Menu.yy",
   },
   "parentObjectId":{
     "name":"obj_base_button",

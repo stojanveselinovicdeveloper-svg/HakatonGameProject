@@ -1,17 +1,19 @@
 {
   "$GMObject":"",
-  "%Name":"obj_button_credits",
+  "%Name":"obj_options_visuals",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":10,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":11,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_button_credits",
+  "name":"obj_options_visuals",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_base_button","path":"objects/obj_base_button/obj_base_button.yy",},"propertyId":{"name":"button_text","path":"objects/obj_base_button/obj_base_button.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Credits",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_base_button","path":"objects/obj_base_button/obj_base_button.yy",},"propertyId":{"name":"button_text","path":"objects/obj_base_button/obj_base_button.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Video",},
   ],
   "parent":{
-    "name":"Menu",
-    "path":"folders/Objects/UI/Menu.yy",
+    "name":"Options",
+    "path":"folders/Objects/UI/Options.yy",
   },
   "parentObjectId":{
     "name":"obj_base_button",
@@ -35,8 +37,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_button",
-    "path":"sprites/spr_button/spr_button.yy",
+    "name":"spr_options_box",
+    "path":"sprites/spr_options_box/spr_options_box.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -10,8 +10,8 @@
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_base_button","path":"objects/obj_base_button/obj_base_button.yy",},"propertyId":{"name":"button_text","path":"objects/obj_base_button/obj_base_button.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Start",},
   ],
   "parent":{
-    "name":"UI",
-    "path":"folders/Objects/UI.yy",
+    "name":"Menu",
+    "path":"folders/Objects/UI/Menu.yy",
   },
   "parentObjectId":{
     "name":"obj_base_button",
