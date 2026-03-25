@@ -1,7 +1,8 @@
 if location2 != 0 {
 	if location2 == location1{
 		location_curr = location1;
-		show_debug_message("on the way back to hospital");
+		show_debug_message("on the way back to hospital " );
+		show_debug_message(string(location1));
 		alarm_set(0, 60*10*time);
 	}
 	else {
