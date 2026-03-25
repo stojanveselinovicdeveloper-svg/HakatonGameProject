@@ -5,10 +5,12 @@ function scrpt_buttonTabDraw( button_rel_x, button_rel_y, button_rel_w,button_re
 	var bh = win_h * button_rel_h;
 	
 	// draw button
+	
 	draw_set_color(button_hover && !button_clicked ? c_gray : c_dkgray);
 	draw_rectangle(bx, by, bx + bw, by + bh, false);
 
 	// text
+	draw_set_font(fnt_press_start_menu);
 	draw_set_halign(fa_center);
 	draw_set_valign(fa_middle);
 	draw_set_color(c_white);
