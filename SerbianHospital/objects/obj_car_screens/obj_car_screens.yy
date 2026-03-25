@@ -10,6 +10,8 @@
   "name":"obj_car_screens",
   "overriddenProperties":[
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_tabs_parent","path":"objects/obj_tabs_parent/obj_tabs_parent.yy",},"propertyId":{"name":"tab_sprite","path":"objects/obj_tabs_parent/obj_tabs_parent.yy",},"resource":{"name":"spr_screen_cars","path":"sprites/spr_screen_cars/spr_screen_cars.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_screen_cars",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_tabs_parent","path":"objects/obj_tabs_parent/obj_tabs_parent.yy",},"propertyId":{"name":"win_w","path":"objects/obj_tabs_parent/obj_tabs_parent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"960",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_tabs_parent","path":"objects/obj_tabs_parent/obj_tabs_parent.yy",},"propertyId":{"name":"win_h","path":"objects/obj_tabs_parent/obj_tabs_parent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"1080",},
   ],
   "parent":{
     "name":"Dispatch",

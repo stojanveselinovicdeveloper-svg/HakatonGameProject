@@ -1,6 +1,7 @@
-if location != 0  && location != -1 && can_send {
-	show_debug_message("location change");
-	time = scrpt_car_time_calc(location);
-	alarm_set(0, 60*10*time);
+if location1 != 0  && can_send {
 	can_send = false;
+	show_debug_message("on way to location 1");
+	time = scrpt_car_time_calc(location1, location_curr, false);
+	alarm_set(1, 60*10*time);
+	
 }
