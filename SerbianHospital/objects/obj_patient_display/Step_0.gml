@@ -7,30 +7,32 @@ handleCards();
 
 //Patient related
 function handleCards(){
-	// Create cards only once when popup is fully opened
 	if (!cards_created && current_scale >= 0.99)
 	{
-	    createCards();
+	    create_cards();
 	    cards_created = true;
 	}
 
-	// Optional: if popup closes, remove cards and reset
 	if (current_scale < 0.99 && cards_created)
 	{
-	    for (var i = 0; i < array_length(card_list); i++)
-	    {
-	        if (instance_exists(card_list[i]))
-	        {
-	            with (card_list[i]) instance_destroy();
-	        }
-	    }
-
-	    card_list = [];
+	    destroy_cards();
 	    cards_created = false;
 	}
 }
 
-function createCards()
+function destroy_cards(){
+	for (var i = 0; i < array_length(card_list); i++)
+	{
+	    if (instance_exists(card_list[i]))
+	    {
+	        with (card_list[i]) instance_destroy();
+	    }
+	}
+
+	card_list = [];
+}
+
+function create_cards()
 {
     var parent_width  = sprite_get_width(sprite_index)  * current_scale;
     var parent_height = sprite_get_height(sprite_index) * current_scale;
@@ -38,7 +40,7 @@ function createCards()
     var parent_left = x - parent_width * 0.5;
     var parent_top  = y - parent_height * 0.5;
 
-    var card_count = array_length(card_list);
+    var card_count = array_length(patient_list);
     var card_spacing = 16;
 
     var card_width = parent_width * 0.8;
@@ -53,7 +55,7 @@ function createCards()
     var card_center_x = x;
     var first_card_center_y = parent_top + content_padding_top + card_height * 0.5;
 
-    for (var i = 0; i < 5; i++)
+    for (var i = 0; i < card_count; i++)
     {
         var card_center_y = first_card_center_y + i * (card_height + card_spacing);
 
@@ -69,13 +71,13 @@ function createCards()
         card.card_width = card_width;
         card.card_height = card_height;
 
-        card.patient_name = card_list[i].name;
-        card.patient_age = card_list[i].age;
-        card.patient_status = card_list[i].status;        
-		card.patient_surname = card_list[i].surname;
-        card.patient_address = card_list[i].address;
-		card.patient_priority = card_list[i].priority;	
-		card.patient_description = card_list[i].description;
+        card.patient_name = patient_list[i].patient_name;
+        card.patient_age = patient_list[i].patient_age;
+        card.patient_status = patient_list[i].patient_status;        
+		card.patient_surname = patient_list[i].patient_surname;
+        card.patient_address = patient_list[i].patient_address;
+		card.patient_priority = patient_list[i].patient_priority;	
+		card.patient_description = patient_list[i].patient_description;
 
 
 
@@ -91,6 +93,6 @@ function createCards()
 
 function loadActivePatients(){
 	if (variable_global_exists("active_patients") && array_length(card_list) < 1){
-		card_list = global.active_patients;
+		patient_list = global.patient_calls;
 	}
 }

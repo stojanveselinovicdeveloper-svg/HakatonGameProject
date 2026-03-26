@@ -12,18 +12,18 @@ if (file_exists(path)){
 	
 	file_text_close(file);
 	global.patients = json_parse(json);
+	
 }
 else {
 	global.patients = [];
 }
 
-if (variable_global_exists("patients")){
-	
-	global.active_patients = [];
-	//For test purposes lets put 10 active patients on display
-	for (var i = 0; i < 10; i++) {
-		global.active_patients[i] = global.patients[i];
-	}
-}
+global.active_patients = [];
+global.patient_calls = [];
+global.completed_patients = [];
+global.patient_call = undefined;
 global.ui_blocking = false;
-global.open_apps = 0;
+global.open_apps_count = 0;
+global.monitor_ui_disabled = false;
+global.open_apps = [];
+

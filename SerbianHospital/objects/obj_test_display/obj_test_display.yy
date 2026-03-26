@@ -1,21 +1,19 @@
 {
   "$GMObject":"",
-  "%Name":"obj_monitor_display",
+  "%Name":"obj_test_display",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_monitor_display",
+  "name":"obj_test_display",
   "overriddenProperties":[],
   "parent":{
     "name":"UI",
     "path":"folders/Objects/UI.yy",
   },
   "parentObjectId":{
-    "name":"obj_zoomable",
-    "path":"objects/obj_zoomable/obj_zoomable.yy",
+    "name":"obj_app_display",
+    "path":"objects/obj_app_display/obj_app_display.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -34,10 +32,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_monitor_display",
-    "path":"sprites/spr_monitor_display/spr_monitor_display.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }
