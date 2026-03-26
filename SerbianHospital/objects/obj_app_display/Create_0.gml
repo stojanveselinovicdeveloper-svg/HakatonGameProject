@@ -1,0 +1,13 @@
+is_open = false;
+current_scale = 0;
+target_scale = 0;
+focused = false;
+close_btn = noone;
+depth = -100;
+scroll_y = 0;
+scroll_speed = 32;
+content_height = 0;
+content_padding_top = 40;
+content_padding_bottom = 24;
+scale_delay = 0.15;
+position = 1440;
