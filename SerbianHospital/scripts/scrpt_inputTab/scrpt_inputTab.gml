@@ -21,7 +21,7 @@ function scrpt_inputTab( input_rel_x,input_rel_y,  input_rel_w, input_rel_h, inp
 	// --- KEYBOARD INPUT (only if active) ---
 	if (input_active) {
 	    // numbers (top row)
-	    for (var i = ord("0"); i <= ord("6"); i++) {
+	    for (var i = ord("1"); i <= ord("6"); i++) {
 	        if (keyboard_check_pressed(i) && !hasANumber) {
 	            input_text += chr(i);
 				hasANumber = true;
