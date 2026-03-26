@@ -23,12 +23,10 @@ function updateAppDisplay() {
 	
 	current_scale = lerp(current_scale, target_scale, scale_delay);
 	image_xscale = current_scale;
-	image_yscale = current_scale
+	image_yscale = current_scale;
 	x = position;
 	y = 540;
 }
-
-//global.ui_blocking = is_open;
 
 
 
