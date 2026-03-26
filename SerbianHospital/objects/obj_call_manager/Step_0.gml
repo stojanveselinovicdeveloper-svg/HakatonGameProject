@@ -2,10 +2,13 @@ if (!disabled &&!call_in_progress && !call_pending) {
     next_call_timer--;
 
     if (next_call_timer <= 0) {
-		set_random_patient();
-        ring_sound_id = audio_play_sound(snd_phone_call, 10, true);
-		call_progress_timer = irandom_range(pickup_timer_min,pickup_timer_max);
-        call_pending = true;
+		var is_created = set_random_patient();
+		
+        if (is_created){
+			ring_sound_id = audio_play_sound(snd_phone_call, 10, true);
+			call_progress_timer = irandom_range(pickup_timer_min,pickup_timer_max);
+	        call_pending = true;
+		}
     }
 }
 
@@ -49,22 +52,27 @@ function set_random_patient(){
     } else {
         global.patient_call = undefined;
     }
+	return array_length(filtered) > 0;
 }
 
 function filter_patients(_priority){
 	var filtered = [];
     var patients = global.patients;
     var active = global.active_patients;
-    var completed = global.completed_patients;
+    var completed = global.completed_patients;   
+	var pending_patients = global.patient_calls;
+
 
     var patients_len = array_length(patients);
     var active_len = array_length(active);
-    var completed_len = array_length(completed);
+    var completed_len = array_length(completed);    
+	var pending_patients_len = array_length(pending_patients);
+
 
     for (var i = 0; i < patients_len; i++) {
         var patient = patients[i];
 
-        if (patient.patient_priority != _priority) {
+        if (patient.patient_priority > _priority) {
             continue;
         }
 
@@ -87,6 +95,21 @@ function filter_patients(_priority){
                 found = true;
                 break;
             }
+        }
+		
+		if (found) {
+            continue;
+        }
+
+        for (var k = 0; k < pending_patients_len; k++) {
+            if (pending_patients[k].patient_id == patient_id) {
+                found = true;
+                break;
+            }
+        }
+		
+		if (found) {
+            continue;
         }
 
         if (!found) {
