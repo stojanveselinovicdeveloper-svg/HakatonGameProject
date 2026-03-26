@@ -1,9 +1,14 @@
 parent_popup = noone;
 slot_index = 0;
 
-patient_name = "Unknown";
-patient_age = "Age: --";
-patient_status = "Status: --";
+patient_name = "";
+patient_age = "";
+patient_address = "";
+patient_status = "";
+patient_surname = "";
+patient_description = "";
+patient_priority = 0;
+
 depth = -100;
 
 card_width = 256;

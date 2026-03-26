@@ -1,26 +1,9 @@
-updateAppDisplay();
+event_inherited();
 
-if (current_scale >= 0.99){
-	is_open = true;
-}
-else if (current_scale <= 0) {
-	is_open = false;
-}
-
-
-if (instance_exists(close_btn)){
-	close_btn.target_scale = target_scale;	
-}
-
-function updateAppDisplay() {
-	current_scale = lerp(current_scale, target_scale, 0.15);
-	image_xscale = current_scale;
-	image_yscale = current_scale;
-	x = room_width * 0.5;
-	y = room_height * 0.5;
-}
+loadActivePatients();
 
 handleCards();
+
 
 //Patient related
 function handleCards(){
@@ -55,31 +38,46 @@ function createCards()
     var parent_left = x - parent_width * 0.5;
     var parent_top  = y - parent_height * 0.5;
 
-    var card_count = 3;
+    var card_count = array_length(card_list);
     var card_spacing = 16;
 
     var card_width = parent_width * 0.8;
-    var card_height = 128;
+    var card_height = 180;
+	var content_padding_top = 40;
+	
+	
+	var start_local_y = -parent_height * 0.5 + content_padding_top + card_height * 0.5;
 
-    // inset from the true visible content area
-    var content_padding_top = 40;
+	content_height = card_count * card_height + max(0, card_count - 1) * card_spacing;
 
     var card_center_x = x;
     var first_card_center_y = parent_top + content_padding_top + card_height * 0.5;
 
-    for (var i = 0; i < card_count; i++)
+    for (var i = 0; i < 5; i++)
     {
         var card_center_y = first_card_center_y + i * (card_height + card_spacing);
 
         var card = instance_create_layer(card_center_x, card_center_y, "Instances", obj_patient_card);
+		
+		var local_x = 0;                                                  
+		var local_y = start_local_y + i * (card_height + card_spacing);
+
+		card.base_x_offset = local_x;
+		card.base_y_offset = local_y
 
         card.parent_popup = id;
         card.card_width = card_width;
         card.card_height = card_height;
 
-        card.patient_name = "Patient " + string(i + 1);
-        card.patient_age = "Age: " + string(20 + i);
-        card.patient_status = "Stable";
+        card.patient_name = card_list[i].name;
+        card.patient_age = card_list[i].age;
+        card.patient_status = card_list[i].status;        
+		card.patient_surname = card_list[i].surname;
+        card.patient_address = card_list[i].address;
+		card.patient_priority = card_list[i].priority;	
+		card.patient_description = card_list[i].description;
+
+
 
         card.x_offset = card_center_x - x;
         card.y_offset = card_center_y - y;
@@ -89,4 +87,10 @@ function createCards()
 
         array_push(card_list, card);
     }
+}
+
+function loadActivePatients(){
+	if (variable_global_exists("active_patients") && array_length(card_list) < 1){
+		card_list = global.active_patients;
+	}
 }

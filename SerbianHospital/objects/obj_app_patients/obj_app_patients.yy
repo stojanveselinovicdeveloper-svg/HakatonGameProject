@@ -2,7 +2,7 @@
   "$GMObject":"",
   "%Name":"obj_app_patients",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"obj_app_patients",
@@ -12,8 +12,8 @@
     "path":"folders/Objects/UI.yy",
   },
   "parentObjectId":{
-    "name":"obj_base_interactable",
-    "path":"objects/obj_base_interactable/obj_base_interactable.yy",
+    "name":"obj_app_base",
+    "path":"objects/obj_app_base/obj_app_base.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
