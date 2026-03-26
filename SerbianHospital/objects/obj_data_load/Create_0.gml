@@ -1,5 +1,5 @@
 
-path = working_directory + "patients.json";
+path = working_directory + "patientsTest.json";
 
 if (file_exists(path)){
 	var json = "";

@@ -3,6 +3,8 @@ event_inherited();
 if (!is_open){
 	exit;
 } 
+
+
 var result;
 
 //car 1 input 1
@@ -87,5 +89,4 @@ if b2_clicked && obj_car2.can_send{
 		}
 	}
 }
-
 

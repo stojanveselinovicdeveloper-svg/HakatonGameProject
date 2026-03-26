@@ -1,3 +1,2 @@
-with (obj_car_screens) {
-    is_open = true;
-}
+event_inherited();
+app = obj_car_screens;

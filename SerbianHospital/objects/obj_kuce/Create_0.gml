@@ -9,7 +9,9 @@ function Injured(_name,_surname,_age, _status, _house) constructor{
 residents = array_create(6);
 
 for(var i = 0; i < 6; i++){
-	residents[i] = noone;
+	residents[i] = array_create(5);
+	for(var j = 0; j < 5; j++){
+		residents[i][j] = noone;
+	}
 }
 
-residents[2] = new Injured("Sanja", "Mirkovic", 20, "Critical", 3);

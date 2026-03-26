@@ -1,3 +1,4 @@
+event_inherited();
 //Button For Car 1 (or button 1)
 b1_rel_x = 0.6; // 60% from left
 b1_rel_y = 0.1; // 10% from top

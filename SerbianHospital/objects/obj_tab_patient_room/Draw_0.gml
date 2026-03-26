@@ -1,40 +1,51 @@
-if(!is_open){
-	exit;
-}
+event_inherited();
 
-var margin_top = 60;
-var split_y = y + win_h / 2;
-//SPRITE
-draw_sprite_stretched(spr_tab_base, 0, x, y, win_w, win_h);
+if (!is_open) exit;
 
-//TOP HALF
-var room_x = x;
-var room_y = y + margin_top;
-var room_w = win_w;
-var room_h = (win_h / 2) - margin_top;
+// scale
+var scale = current_scale;
 
-var bed_w = 160;
-var bed_h = 100;
-var x_spacing = 200;
-var y_spacing = 40;
+// dimenzije taba
+var TAB_W = 960 * scale;
+var TAB_H = 1080 * scale;
 
-// center beds nicely
-var cols = 2;
+// centar (jer scale ide iz centra)
+var draw_x = x - TAB_W / 2;
+var draw_y = y - TAB_H / 2;
+
+// background
+draw_sprite_stretched(spr_tab_base, 0, draw_x, draw_y, TAB_W, TAB_H);
+
+var margin_top = 60 * scale;
+var split_y = draw_y + TAB_H / 2;
+
+// room
+var room_y = draw_y + margin_top;
+var room_h = TAB_H/2 - margin_top;
+
+// grid
+var cols = 3;
+var bed_w = 160 * scale;
+var bed_h = 100 * scale;
+var spacing = 40 * scale;
+
 var rows = ceil(array_length(beds) / cols);
 
-var total_w = cols * bed_w + (cols - 1) * x_spacing;
-var total_h = rows * bed_h + (rows - 1) * y_spacing;
+var total_w = cols * bed_w + (cols - 1) * spacing;
+var total_h = rows * bed_h + (rows - 1) * spacing;
 
-var start_x = room_x + (room_w - total_w) / 2;
+var start_x = draw_x + (TAB_W - total_w) / 2;
 var start_y = room_y + (room_h - total_h) / 2;
+
+// draw
 
 for (var i = 0; i < 6; i++) {
 
-    var col = i mod 2;
-    var row = i div 2;
+    var col = i mod cols;
+    var row = i div cols;
 
-    var bx = start_x + col * (bed_w + x_spacing);
-    var by = start_y + row * (bed_h + y_spacing);
+    var bx = start_x + col * (bed_w + spacing);
+    var by = start_y + row * (bed_h + spacing);
 
     var has_patient = beds[i] != noone;
 
@@ -44,21 +55,14 @@ for (var i = 0; i < 6; i++) {
     draw_set_color(c_white);
     draw_text(bx + 10, by + 10, "Bed " + string(i+1));
 
-    // highlight selected
     if (i == selected_bed) {
         draw_set_color(c_yellow);
         draw_rectangle(bx, by, bx + bed_w, by + bed_h, true);
     }
 }
 
-//BOTTOM HALF
-var panel_x = x;
-var panel_y = split_y;
-var panel_w = win_w;
-var panel_h = win_h / 2;
-
-draw_set_color(c_gray);
-draw_rectangle(panel_x + 15, panel_y, panel_x + panel_w - 13, panel_y + panel_h, false);
+draw_set_color(make_color_rgb(30,30,30));
+draw_rectangle(draw_x, split_y, draw_x + TAB_W, draw_y + TAB_H, false);
 
 if (selected_bed != -1) {
 
@@ -67,13 +71,12 @@ if (selected_bed != -1) {
     draw_set_color(c_white);
 
     if (patient == noone) {
-        draw_text(panel_x + 30, panel_y + 30, "Bed is empty");
+        draw_text(draw_x + 30, split_y + 30, "Bed is empty");
     } else {
-        draw_text(panel_x + 30, panel_y + 30, "Name: " + patient.name);
-        draw_text(panel_x + 30, panel_y + 70, "Condition: " + patient.condition);
+        draw_text(draw_x + 30, split_y + 30, "Name: " + patient.name);
+        draw_text(draw_x + 30, split_y + 70, "Condition: " + patient.condition);
     }
 }
-
 //DRAW BUTTON
 if (selected_bed != -1) {
 
@@ -81,15 +84,17 @@ if (selected_bed != -1) {
 
     if (patient != noone) {
 
-        var btn_x = panel_x + 30;
-        var btn_y = panel_y + 150;
-        var btn_w = 180;
-        var btn_h = 50;
+        var btn_w = 180 * scale;
+        var btn_h = 50 * scale;
+
+        var btn_x = draw_x + 30 * scale;
+        var btn_y = split_y + 150 * scale;
 
         draw_set_color(c_green);
         draw_rectangle(btn_x, btn_y, btn_x + btn_w, btn_y + btn_h, false);
 
         draw_set_color(c_black);
-        draw_text(btn_x + 20, btn_y + 15, "Discharge");
+        draw_text(btn_x + 20 * scale, btn_y + 15 * scale, "Discharge");
     }
 }
+
