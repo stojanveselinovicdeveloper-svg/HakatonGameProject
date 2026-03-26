@@ -11,7 +11,10 @@
     "name":"Dispatch",
     "path":"folders/Objects/Dispatch.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_app_base",
+    "path":"objects/obj_app_base/obj_app_base.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
