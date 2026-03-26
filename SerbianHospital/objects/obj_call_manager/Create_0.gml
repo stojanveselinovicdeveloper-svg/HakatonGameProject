@@ -12,4 +12,4 @@ pickup_timer_min = game_get_speed(gamespeed_fps) * 7;
 pickup_timer_max = game_get_speed(gamespeed_fps) * 9;
 call_progress_timer = irandom_range(pickup_timer_min,pickup_timer_max);
 caller_screen_popup = noone;
-call_priority = 1;
+call_priority = 5;
