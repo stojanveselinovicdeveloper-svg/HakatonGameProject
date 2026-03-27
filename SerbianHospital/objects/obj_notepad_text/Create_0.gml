@@ -23,6 +23,7 @@ line_height = 24;
 max_chars_per_line = 18;
 max_lines = 15;
 row_height = line_height + line_gap;
+depth = -300;
 
 load_note_data();
 

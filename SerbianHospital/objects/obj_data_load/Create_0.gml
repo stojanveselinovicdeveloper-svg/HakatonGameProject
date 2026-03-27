@@ -26,4 +26,5 @@ global.ui_blocking = false;
 global.open_apps_count = 0;
 global.monitor_ui_disabled = false;
 global.open_apps = [];
+global.max_tabs = 2;
 

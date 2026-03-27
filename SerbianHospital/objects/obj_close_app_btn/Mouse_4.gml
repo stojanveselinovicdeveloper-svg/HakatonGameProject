@@ -1,6 +1,5 @@
-if (popup.position == 480){
-	global.ui_blocking = false;
-}
+global.ui_blocking = false;
+
 
 if (global.open_apps_count > 0){
 	global.open_apps_count -= 1;

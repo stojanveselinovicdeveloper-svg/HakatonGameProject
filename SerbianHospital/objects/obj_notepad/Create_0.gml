@@ -14,4 +14,4 @@ move_speed = 0.15;
 
 tab = noone;
 text_area = noone;
-
+depth = -200;
