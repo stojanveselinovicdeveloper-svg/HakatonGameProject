@@ -13,9 +13,6 @@ var TAB_H = 1080 * scale;
 var draw_x = x - TAB_W / 2;
 var draw_y = y - TAB_H / 2;
 
-// background
-draw_sprite_stretched(spr_tab_base, 0, draw_x, draw_y, TAB_W, TAB_H);
-
 var margin_top = 60 * scale;
 var split_y = draw_y + TAB_H / 2;
 

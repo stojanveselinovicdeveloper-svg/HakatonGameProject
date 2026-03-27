@@ -1,4 +1,8 @@
 updateAppDisplay();
+if (is_big){
+	update_close_btn_sprite();
+	is_big = false;
+}
 
 if (current_scale >= 0.99){
 	is_open = true;
@@ -28,5 +32,11 @@ function updateAppDisplay() {
 	y = 540;
 }
 
-
+function update_close_btn_sprite(){
+	if (is_big){
+		close_btn.sprite_index = spr_close_app_big_button;
+		close_btn.padding_x = 85;
+		close_btn.y_offset = close_btn.y - y;
+	}
+}
 

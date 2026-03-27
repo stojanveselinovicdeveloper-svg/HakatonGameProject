@@ -1,2 +1,2 @@
 event_inherited();
-app = obj_test_display;
+app_type = obj_test_display;

@@ -1,2 +1,2 @@
 event_inherited();
-app = obj_patient_display;
+app_type = obj_patient_display;
