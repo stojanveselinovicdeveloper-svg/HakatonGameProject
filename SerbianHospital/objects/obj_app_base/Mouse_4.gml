@@ -1,35 +1,44 @@
 if ((variable_global_exists("ui_blocking") && !global.ui_blocking && !disabled) || ui_prevent_blocking){
 	if (app != noone && app.is_open){
-		with (app)
-		{
-		    target_scale = 0;
-			if (global.open_apps_count > 0){
-				global.open_apps_count -= 1;
-				remove_app(id);
-			}
-		}
+		close_app(app);
 	}
 	else if (app != noone) {
-		with (app)
-		{
-			if (global.open_apps_count < 2){
-				global.open_apps_count +=1;
-			}
-			close_existing_app();
-			window_set_cursor(cr_default);
-		    target_scale = 1;
-			position = get_position(global.open_apps_count);
-			save_app(id,position);
+		open_app(app);
+	}
+}
+
+function open_app(_app){
+	with (_app)
+	{
+		if (global.open_apps_count < other.max_tabs){
+			global.open_apps_count +=1;
+		}
+		
+		close_existing_app(other.max_tabs);
+		target_scale = 1;
+		other.position = get_position(global.open_apps_count, other.max_tabs);
+		save_app(id, other.position);
+		var block_app_ui = (other.max_tabs == 2 && other.position != 1440) || other.max_tabs == 1;
+		global.ui_blocking = block_app_ui;
+		window_set_cursor(cr_default);
 			
-			if (position == 480){
-				global.ui_blocking = true;
-			}
-			
+	}
+}
+
+function close_app(_app){
+	with (_app)
+	{
+		target_scale = 0;
+		if (global.open_apps_count > 0){
+			global.open_apps_count -= 1;
+			remove_app(id);
 		}
 	}
 }
 
-function get_position(openApps){
+function get_position(openApps, _max_tabs){
+	if (_max_tabs == 1) return 580;
+	
 	switch(openApps){
 		case 1:
 			return 1440;
@@ -65,15 +74,14 @@ function app_obj(app,position) constructor{
 	app_position = position;
 }
 
-function close_existing_app() {
-	if (variable_global_exists("open_apps_count") && global.open_apps_count == 2){
-		for(var i = 0 ;i < array_length(global.open_apps); i++){
-			if (global.open_apps[i].app_position == 1440){
-				var existing_app = global.open_apps[i];
-				existing_app.app_id.is_open = false;
-				remove_app(existing_app.app_id);
-				break;
-			}
+function close_existing_app(_max_tabs) {
+	var open_apps_len = array_length(global.open_apps);
+	for(var i = 0 ;i < open_apps_len; i++){
+		if (global.open_apps[i].app_position == 1440){
+			var existing_app = global.open_apps[i];
+			existing_app.app_id.is_open = false;
+			remove_app(existing_app.app_id);
+			break;
 		}
 	}
 }

@@ -1,4 +1,4 @@
-if (!disabled &&!call_in_progress && !call_pending) {
+if (!disabled &&!call_in_progress && !call_pending && patients_in_progress < call_limit) {
     next_call_timer--;
 
     if (next_call_timer <= 0) {
@@ -43,6 +43,11 @@ if(disabled && next_call_timer <= 10){
 	stop_ring_sound();
 }
 
+var active_len = array_length(global.active_patients);
+var pending_patients_len = array_length(global.patient_calls);
+patients_in_progress = active_len + pending_patients_len;
+
+
 function set_random_patient(){
 	var filtered = filter_patients(call_priority);
 
@@ -67,6 +72,7 @@ function filter_patients(_priority){
     var active_len = array_length(active);
     var completed_len = array_length(completed);    
 	var pending_patients_len = array_length(pending_patients);
+
 
 
     for (var i = 0; i < patients_len; i++) {

@@ -1,11 +1,9 @@
 event_inherited();
 
-loadActivePatients();
+loadPatients();
 
 handleCards();
 
-
-//Patient related
 function handleCards(){
 	if (!cards_created && current_scale >= 0.99)
 	{
@@ -40,20 +38,19 @@ function create_cards()
     var parent_left = x - parent_width * 0.5;
     var parent_top  = y - parent_height * 0.5;
 
-    var card_count = array_length(patient_list);
     var card_spacing = 16;
 
     var card_width = parent_width * 0.8;
     var card_height = 180;
-	var content_padding_top = 40;
+	var content_padding_top = 70;
 	
 	
 	var start_local_y = -parent_height * 0.5 + content_padding_top + card_height * 0.5;
 
-	content_height = card_count * card_height + max(0, card_count - 1) * card_spacing;
-
     var card_center_x = x;
     var first_card_center_y = parent_top + content_padding_top + card_height * 0.5;
+	var card_count = array_length(patient_list);
+	content_height = card_count * card_height + max(0, card_count - 1) * card_spacing;
 
     for (var i = 0; i < card_count; i++)
     {
@@ -91,8 +88,8 @@ function create_cards()
     }
 }
 
-function loadActivePatients(){
-	if (variable_global_exists("active_patients") && array_length(card_list) < 1){
+function loadPatients(){
+	if (variable_global_exists("patient_calls")){
 		patient_list = global.patient_calls;
 	}
 }
