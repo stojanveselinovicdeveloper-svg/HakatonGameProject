@@ -1,10 +1,13 @@
 
-if(global.score >= 10){
+
+if(global.score >= 3){
 	show_debug_message("You win!");
-	room_goto(rm_credits);
+	persistent = false;
+	room_goto(rm_win);
 }
 
 if(global.life <= 0){
 	show_debug_message("You lose..");
-	room_goto(rm_menu);
+	persistent = false;
+	room_goto(rm_lose);
 }

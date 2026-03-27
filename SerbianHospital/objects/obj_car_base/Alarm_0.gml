@@ -5,26 +5,35 @@ for(var i = 0; i<5; i++){
 	if(obj_kuce.residents[kuca][i] != noone && !pickedup){
 		with(obj_kuce){
 			//removing patient
-			var name = obj_kuce.residents[kuca][i].name;
-			var status = obj_kuce.residents[kuca][i].status;
-			//adding patient
-			with(obj_tab_patient_room){
-				for (var j = 0; j < 6; j++) {
-					if beds[j] == noone {
-						show_debug_message("Patient picked up");
-						beds[j] = new Patient(name, status) ;
-						pickedup = true;
+			if(instance_exists(obj_kuce.residents[kuca][i])){
+				var curr = obj_kuce.residents[kuca][i];
+				var name = obj_kuce.residents[kuca][i].patient_name;
+				var status = obj_kuce.residents[kuca][i].patient_status;
+				active_injured -= 1;
+				//adding patient
+				with(obj_tab_patient_room){
+					for (var j = 0; j < 6; j++) {
+						if beds[j] == noone {
+							scrpt_removePatientCall(curr);
+							beds[j] = new Patient(name, status) ;
+							pickedup = true;
+							obj_kuce.residents[kuca][i] = noone;
+							break;
+						}
+				}
+				//no room in room
+					if(obj_kuce.residents[kuca][i]  != noone){
+						//Tu ce biti neki notification da se ne moze smesititi pacijent i - bodovi
+						show_debug_message("No space for patients");
 						obj_kuce.residents[kuca][i] = noone;
-						break;
 					}
+				}
 			}
-			//no room in room
-			if(obj_kuce.residents[kuca][i]  != noone){
-				//Tu ce biti neki notification da se ne moze smesititi pacijent i - bodovi
-				show_debug_message("No space for patients");
+			else {
 				obj_kuce.residents[kuca][i] = noone;
+				show_debug_message("Dead person deleted");
+				active_injured -=1;
 			}
-		}
 		}
 	}
 }
@@ -37,19 +46,33 @@ if location2 != 0{
 		if(obj_kuce.residents[kuca][i] != noone && !pickedup){
 			with(obj_kuce){
 				//removing patient
-				var name = obj_kuce.residents[kuca][i].name;
-				var status = obj_kuce.residents[kuca][i].status;
-				obj_kuce.residents[kuca][i] = noone;
-				//adding patient
-				with(obj_tab_patient_room){
-					for (var j = 0; j < 6; j++) {
-						if beds[j] == noone {
-							show_debug_message("Patient picked up");
-							beds[j] = new Patient(name, status) ;
-							pickedup = true;
-							break;
+				if(instance_exists(obj_kuce.residents[kuca][i])) {
+					var curr = obj_kuce.residents[kuca][i];
+					var name = obj_kuce.residents[kuca][i].patient_name;
+					var status = obj_kuce.residents[kuca][i].patient_status;
+					active_injured -= 1;
+					//adding patient
+					with(obj_tab_patient_room){
+						for (var j = 0; j < 6; j++) {
+							if beds[j] == noone {
+								scrpt_removePatientCall(curr);
+								beds[j] = new Patient(name, status) ;
+								pickedup = true;
+								obj_kuce.residents[kuca][i] = noone;
+								break;
+							}
+					}
+					//no room in room
+						if(obj_kuce.residents[kuca][i]  != noone){
+							//Tu ce biti neki notification da se ne moze smesititi pacijent i - bodovi
+							show_debug_message("No space for patients");
+							obj_kuce.residents[kuca][i] = noone;
 						}
 					}
+				}
+				else {
+					obj_kuce.residents[kuca][i] = noone;
+					active_injured -=1;
 				}
 			}
 		}
