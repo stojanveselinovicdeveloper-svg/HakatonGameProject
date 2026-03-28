@@ -1,6 +1,6 @@
 event_inherited();
 
-disabled = click_delay_timer > 0;
+delayed = click_delay_timer > 0;
 if (click_delay_timer > 0 ){
 	click_delay_timer--;
 }

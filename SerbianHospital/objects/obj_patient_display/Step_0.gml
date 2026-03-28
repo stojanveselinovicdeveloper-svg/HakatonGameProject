@@ -4,6 +4,8 @@ loadPatients();
 
 handleCards();
 
+update_card_positions();
+
 function handleCards(){
 	if (!cards_created && current_scale >= 0.99)
 	{
@@ -86,6 +88,37 @@ function create_cards()
 
         array_push(card_list, card);
     }
+}
+
+function update_card_positions()
+{
+	if (!cards_created) return;
+
+	scroll_y = lerp(scroll_y, target_scroll_y, 0.25);
+
+	if (abs(scroll_y - target_scroll_y) < 0.5)
+	{
+		scroll_y = target_scroll_y;
+	}
+
+	var parent_height = sprite_get_height(sprite_index) * current_scale;
+	var visible_top = y - parent_height * 0.5 + content_padding_top + 180;
+	var visible_bottom = y + parent_height * 0.5 - content_padding_bottom;
+
+	for (var i = 0; i < array_length(card_list); i++)
+	{
+		var card = card_list[i];
+
+		if (instance_exists(card))
+		{
+			card.x = x + card.base_x_offset;
+			card.y = y + card.base_y_offset - scroll_y;
+
+			card.visible =
+				(card.y + card.card_height * 0.5 >= visible_top) &&
+				(card.y - card.card_height * 0.5 <= visible_bottom);
+		}
+	}
 }
 
 function loadPatients(){

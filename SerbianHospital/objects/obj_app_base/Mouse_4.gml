@@ -1,18 +1,17 @@
 event_inherited();
 
-if ((variable_global_exists("ui_blocking") && !global.ui_blocking && !disabled) || ui_prevent_blocking){
+if ((variable_global_exists("ui_blocking") && !global.ui_blocking && !disabled && !delayed) || ui_prevent_blocking){
 	if (instance_exists(app) && app.is_open){
 		close_app();
-		click_delay_timer = 2;
+		click_delay_timer = 1;
 	}
 	else if (!instance_exists(app)) {
 		open_app();
-		click_delay_timer = 2;
+		click_delay_timer = 1;
 	}
 }
 
 function open_app() {
-	
 	var open_apps_len = array_length(global.open_apps);
 	
 	if (open_apps_len >= max_tabs){
@@ -29,6 +28,7 @@ function open_app() {
 		}
 		
 		save_app(app, position);
+		refresh_right_side_ui();
 	
 		var block_app_ui = (max_tabs == 2 && position != 1440) || max_tabs == 1;
 		global.ui_blocking = block_app_ui;
@@ -51,6 +51,7 @@ function close_app(){
 	var open_apps_len = array_length(global.open_apps);
 	if (instance_exists(app) && open_apps_len > 0) {
 		remove_app(app);
+		refresh_right_side_ui();
 
 		if (app.position == 480){
 			global.ui_blocking = false;
@@ -134,6 +135,43 @@ function close_existing_app() {
 			instance_destroy();
 		};
 		remove_app(inst);
+		refresh_right_side_ui();
 		break;
 	}
+}
+
+function right_side_tab_exists() {
+    if (variable_global_exists("open_apps")) {
+        var open_apps = global.open_apps;
+        var open_apps_len = array_length(open_apps);
+
+        for (var i = 0; i < open_apps_len; i++) {
+            if (variable_struct_exists(open_apps[i], "app_position")
+            && open_apps[i].app_position == 1440) {
+                return true;
+            }
+        }
+    }
+
+    return false;
+}
+
+function refresh_right_side_ui() {
+    var should_disable = right_side_tab_exists();
+
+    var count = instance_number(obj_app_base);
+
+    for (var i = 0; i < count; i++) {
+        var inst = instance_find(obj_app_base, i);
+
+        if (inst != noone) {
+            var has_side_flag = variable_instance_exists(inst, "is_right_screen_side");
+            var side_flag = has_side_flag ? inst.is_right_screen_side : false;
+
+
+            if (has_side_flag && side_flag) {
+                inst.disabled = should_disable;
+            }
+        }
+    }
 }
