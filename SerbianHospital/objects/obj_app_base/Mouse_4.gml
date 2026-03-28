@@ -70,15 +70,21 @@ function close_app(){
 
 function get_position(open_apps_len, _max_tabs){
 	if (_max_tabs == 1) return room_width * 0.5;
+	var open_apps = global.open_apps;
 	
-	switch(open_apps_len){
-		case 1:
-			return 480;
-		case 2:
-			return 480;
-		default:
-			return 1440;
+	if (open_apps_len < 1){
+		return 1440;
 	}
+	else if (variable_struct_exists(open_apps[0],"app_position")) {
+		switch(open_apps[0].app_position){
+			case 1440:
+				return 480;
+			case 480:
+				return 1440;
+		}
+	}
+	return 480;
+	
 }
 
 function remove_app(app){
