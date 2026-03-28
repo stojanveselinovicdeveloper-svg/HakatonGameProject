@@ -1,0 +1,11 @@
+event_inherited();
+popup = 0;
+x_offset = 0;
+y_offset = 0;
+padding_x = 40;
+padding_y = 33;
+is_visible = false;
+current_scale = 0;
+target_scale = 0;
+depth = -200;
+ui_prevent_blocking = true;
