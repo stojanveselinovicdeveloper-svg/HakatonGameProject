@@ -1,4 +1,5 @@
 event_inherited();
+window_set_cursor(cr_handpoint);
 
 if ((variable_global_exists("ui_blocking") && !global.ui_blocking && !disabled && !delayed) || ui_prevent_blocking){
 	if (instance_exists(app) && app.is_open){
