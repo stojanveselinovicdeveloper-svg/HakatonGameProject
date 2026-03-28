@@ -4,8 +4,8 @@ call_answered = false; // Weather user answered
 target_room = rm_game;
 disabled = false;
 
-min_call_delay = game_get_speed(gamespeed_fps) * 20;
-max_call_delay = game_get_speed(gamespeed_fps) * 30;
+min_call_delay = game_get_speed(gamespeed_fps) * 5;
+max_call_delay = game_get_speed(gamespeed_fps) * 15;
 next_call_timer = irandom_range(min_call_delay, max_call_delay);
 
 pickup_timer_min = game_get_speed(gamespeed_fps) * 7;
