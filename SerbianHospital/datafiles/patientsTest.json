@@ -44,7 +44,7 @@
     "patient_name": "Milos",
     "patient_surname": "Djordjevic",
     "patient_age": 87,
-    "patient_status": "Critical",
+    "patient_status": "Immediate",
     "patient_priority": 1,
     "patient_address": "Gornja 2",
     "patient_description": "Patient arrived after a minor traffic accident and is under observation for possible concussion."
