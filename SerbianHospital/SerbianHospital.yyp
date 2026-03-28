@@ -129,6 +129,8 @@
     {"id":{"name":"scrpt_inputTabDraw","path":"scripts/scrpt_inputTabDraw/scrpt_inputTabDraw.yy",},},
     {"id":{"name":"scrpt_lifeTime","path":"scripts/scrpt_lifeTime/scrpt_lifeTime.yy",},},
     {"id":{"name":"scrpt_removePatientCall","path":"scripts/scrpt_removePatientCall/scrpt_removePatientCall.yy",},},
+    {"id":{"name":"snd_click","path":"sounds/snd_click/snd_click.yy",},},
+    {"id":{"name":"snd_keyboard_type","path":"sounds/snd_keyboard_type/snd_keyboard_type.yy",},},
     {"id":{"name":"snd_phone_call","path":"sounds/snd_phone_call/snd_phone_call.yy",},},
     {"id":{"name":"spr_app_bg","path":"sprites/spr_app_bg/spr_app_bg.yy",},},
     {"id":{"name":"spr_app_big_bg","path":"sprites/spr_app_big_bg/spr_app_big_bg.yy",},},
