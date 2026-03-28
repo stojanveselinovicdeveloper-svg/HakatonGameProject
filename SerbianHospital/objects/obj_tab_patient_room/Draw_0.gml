@@ -27,7 +27,7 @@ var bed_w = 160 * scale;
 var bed_h = 100 * scale;
 var spacing = 40 * scale;
 
-var rows = ceil(array_length(beds) / cols);
+var rows = ceil(array_length(global.beds) / cols);
 
 var total_w = cols * bed_w + (cols - 1) * spacing;
 var total_h = rows * bed_h + (rows - 1) * spacing;
@@ -45,7 +45,7 @@ for (var i = 0; i < 6; i++) {
     var bx = start_x + col * (bed_w + spacing);
     var by = start_y + row * (bed_h + spacing);
 
-    var has_patient = beds[i] != noone;
+    var has_patient = global.beds[i] != noone;
 
     draw_set_color(has_patient ? c_red : c_gray);
     draw_rectangle(bx, by, bx + bed_w, by + bed_h, false);
@@ -64,7 +64,7 @@ draw_rectangle(draw_x, split_y, draw_x + TAB_W, draw_y + TAB_H, false);
 
 if (selected_bed != -1) {
 
-    var patient = beds[selected_bed];
+    var patient = global.beds[selected_bed];
 
     draw_set_color(c_white);
 
@@ -78,7 +78,7 @@ if (selected_bed != -1) {
 //DRAW BUTTON
 if (selected_bed != -1) {
 
-    var patient = beds[selected_bed];
+    var patient = global.beds[selected_bed];
 
     if (patient != noone) {
 

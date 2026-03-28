@@ -3,8 +3,7 @@ event_inherited();
 if (!is_open){
 	exit;
 } 
-
-
+UpdateSelf();
 var result;
 
 //car 1 input 1
@@ -56,7 +55,7 @@ if b1_clicked && obj_car1.can_send{
 			else {
 				show_debug_message("b1 not clickity clackity");
 				b1_clicked = false;
-				b1_text = "Invalid input!";
+				b1_text = "Hint: you need both\n the name and address";
 	}
 	}
 }
@@ -97,20 +96,22 @@ if b2_clicked && obj_car2.can_send{
 	if i2_hasANUMBER && i22_hasANUMBER && n22_hasANUMBER && n22_hasANUMBER{
 		obj_car2.location1 = scrpt_houseIndex(i2_text);
 		obj_car2.location2 =  scrpt_houseIndex(i22_text);
-		obj_car2.name1 = n1_text;
-		obj_car2.name2 = n11_text;
+		obj_car2.name1 = n2_text;
+		obj_car2.name2 = n22_text;
 	}
 	else {	if ((i2_hasANUMBER && n2_hasANUMBER && !i22_hasANUMBER && !n22_hasANUMBER) || 
 		(i22_hasANUMBER && n22_hasANUMBER &&  !i2_hasANUMBER && !n2_hasANUMBER)) {
 				obj_car2.location1 = (i2_hasANUMBER ?  scrpt_houseIndex(i2_text) :scrpt_houseIndex(i22_text));
-				obj_car2.name1 =  (n1_hasANUMBER ? n1_text : n11_text);
+				obj_car2.name1 =  (n2_hasANUMBER ? n2_text : n22_text);
 			}
 	
 			else {
 				show_debug_message("b2 not clickity clackity");
 				b2_clicked = false;
-				b2_text = "Invalid input!";
+				//tu da menja boju kao
+				b2_text = "Hint: you need both\n the name and address";
 		}
 	}
 }
 
+UpdateGlobal();
