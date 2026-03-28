@@ -4,8 +4,13 @@ call_answered = false; // Weather user answered
 target_room = rm_game;
 disabled = false;
 
+<<<<<<< HEAD
 min_call_delay = game_get_speed(gamespeed_fps) * 15;
 max_call_delay = game_get_speed(gamespeed_fps) * 25;
+=======
+min_call_delay = game_get_speed(gamespeed_fps) * 45;
+max_call_delay = game_get_speed(gamespeed_fps) * 60;
+>>>>>>> parent of ffa4c99 (Merge pull request #24 from stojanveselinovicdeveloper-svg/test/1-katas-evil-testing-branch)
 next_call_timer = irandom_range(min_call_delay, max_call_delay);
 
 pickup_timer_min = game_get_speed(gamespeed_fps) * 7;
