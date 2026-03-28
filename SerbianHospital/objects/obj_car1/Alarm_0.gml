@@ -1,14 +1,16 @@
 event_inherited();
+validAddress(location1);
+validAddress(location2);
 
 show_debug_message("Car  1 arrive");
-obj_car_screens.b1_clicked = false;
-obj_car_screens.b1_text = "Send car 1";
-obj_car_screens.i1_hasANUMBER = false;
-obj_car_screens.i1_text = "";
-obj_car_screens.i11_hasANUMBER = false;
-obj_car_screens.i11_text = "";
+global.b1_clicked = false;
+global.b1_text = "Send car 1";
+global.i1_hasANUMBER = false;
+global.i1_text = "";
+global.i11_hasANUMBER = false;
+global.i11_text = "";
 
-obj_car_screens.n1_hasANUMBER = false;
-obj_car_screens.n1_text = "";
-obj_car_screens.n11_hasANUMBER = false;
-obj_car_screens.n11_text = "";
+global.n1_hasANUMBER = false;
+global.n1_text = "";
+global.n11_hasANUMBER = false;
+global.n11_text = "";
