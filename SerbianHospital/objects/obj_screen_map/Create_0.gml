@@ -1,4 +1,4 @@
-
+event_inherited();
 //Hospital
 h_rel_x = 0.65;
 h_rel_y = 0.55;

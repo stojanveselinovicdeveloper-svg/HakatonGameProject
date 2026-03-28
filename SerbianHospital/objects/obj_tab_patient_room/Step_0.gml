@@ -61,7 +61,7 @@ if (selected_bed != -1) {
 
         if (mouse_check_button_pressed(mb_left)) {
             if (point_in_rectangle(mouse_x, mouse_y, btn_x, btn_y, btn_x + btn_w, btn_y + btn_h)) {
-                
+                patient.released = true;
                 beds[selected_bed] = noone;
             }
         }

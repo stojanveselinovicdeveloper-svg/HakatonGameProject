@@ -8,21 +8,23 @@ function scrpt_car_time_calc(location, curr_location,  between_houses){
 			{
 				//15 minutes
 				case 1:
-					return 1;
+					return 30;
 				//10 minutes	
 				case 2:
-					return 1;
+					return 20;
 				//5 minutes
 				case 3:
-					return 1;
+					return 10;
 			
 				case 4:
-					return 1;
+					return 30;
 		
 				case 5:
-					return 1;
+					return 20;
 		
 				case 6:
+					return 10;
+				default:
 					return 1;
 			
 			}
@@ -33,25 +35,25 @@ function scrpt_car_time_calc(location, curr_location,  between_houses){
 		{
 			//15 minutes
 			case 1:
-				return 1;
+				return 30;
 			//10 minutes	
 			case 2:
-				return 1;
+				return 20;
 			//5 minutes
 			case 3:
-				return 1;
+				return 10;
 			
 			case 4:
-				return 1;
+				return 30;
 		
 			case 5:
-				return 1;
+				return 20;
 		
 			case 6:
-				return 1;
+				return 10;
 			
 			default:
-				return 0.1;
+				return 1;
 		}
 	}
 	
