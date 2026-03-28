@@ -14,8 +14,8 @@
     "path":"folders/Objects/Dispatch.yy",
   },
   "parentObjectId":{
-    "name":"obj_tabs_parent",
-    "path":"objects/obj_tabs_parent/obj_tabs_parent.yy",
+    "name":"obj_app_display",
+    "path":"objects/obj_app_display/obj_app_display.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -34,10 +34,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_map",
-    "path":"sprites/spr_map/spr_map.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

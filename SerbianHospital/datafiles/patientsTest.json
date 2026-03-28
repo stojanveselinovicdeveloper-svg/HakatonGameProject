@@ -4,9 +4,9 @@
     "patient_name": "Sanja",
     "patient_surname": "Mirkovic",
     "patient_age": 20,
-    "patient_status": "Urgent",
-    "patient_priority": 3,
-    "patient_address": 3,
+    "patient_status": "Immediate",
+    "patient_priority": 1,
+    "patient_address": "Gornja 3",
     "patient_description": "Patient reports chest discomfort during physical activity and mild shortness of breath."
   },
   {
@@ -14,9 +14,9 @@
     "patient_name": "Teodora",
     "patient_surname": "Peric",
     "patient_age": 85,
-    "patient_status": "Stable",
-    "patient_priority": 3,
-    "patient_address": 3,
+    "patient_status": "Very Urgent",
+    "patient_priority": 2,
+    "patient_address": "Gornja 3",
     "patient_description": "Patient complains of lower back pain radiating to the left leg."
   },
   {
@@ -24,9 +24,9 @@
     "patient_name": "Vuk",
     "patient_surname": "Mitrovic",
     "patient_age": 70,
-    "patient_status": "Stable",
+    "patient_status": "Urgent",
     "patient_priority": 3,
-    "patient_address": 4,
+    "patient_address": "Donja 1",
     "patient_description": "Patient complains of severe abdominal pain and repeated nausea since last night."
   },
   {
@@ -34,9 +34,9 @@
     "patient_name": "Andjela",
     "patient_surname": "Peric",
     "patient_age": 47,
-    "patient_status": "Stable",
-    "patient_priority": 3,
-    "patient_address": 1,
+    "patient_status": "Less Urgent",
+    "patient_priority": 4,
+    "patient_address": "Gornja 1",
     "patient_description": "Patient arrived after a minor traffic accident and is under observation for possible concussion."
   },
   {
@@ -46,7 +46,7 @@
     "patient_age": 87,
     "patient_status": "Critical",
     "patient_priority": 1,
-    "patient_address": 2,
+    "patient_address": "Gornja 2",
     "patient_description": "Patient arrived after a minor traffic accident and is under observation for possible concussion."
   },
   {
@@ -54,9 +54,9 @@
     "patient_name": "Pavle",
     "patient_surname": "Tomic",
     "patient_age": 25,
-    "patient_status": "Urgent",
-    "patient_priority": 2,
-    "patient_address": 5,
+    "patient_status": "Non Urgent",
+    "patient_priority": 5,
+    "patient_address": "Donja 2",
     "patient_description": "Patient reports chest discomfort during physical activity and mild shortness of breath."
   },
   {
@@ -65,8 +65,8 @@
     "patient_surname": "Jovanovic",
     "patient_age": 71,
     "patient_status": "Urgent",
-    "patient_priority": 2,
-    "patient_address": 6,
+    "patient_priority": 3,
+    "patient_address": "Donja 3",
     "patient_description": "Patient is stable after a routine procedure and waiting for final test results."
   },
   {
@@ -75,8 +75,8 @@
     "patient_surname": "Kostic",
     "patient_age": 49,
     "patient_status": "Urgent",
-    "patient_priority": 2,
-    "patient_address": 3,
+    "patient_priority": 3,
+    "patient_address": "Gornja 3",
     "patient_description": "Patient has elevated blood pressure and headache, requiring continued monitoring."
   },
   {
@@ -84,9 +84,9 @@
     "patient_name": "Marija",
     "patient_surname": "Simic",
     "patient_age": 57,
-    "patient_status": "Urgent",
+    "patient_status": "Very-Urgent",
     "patient_priority": 2,
-    "patient_address": 6,
+    "patient_address": "Donja 3",
     "patient_description": "Patient is recovering well after treatment and awaiting discharge instructions."
   },
   {
@@ -94,8 +94,8 @@
     "patient_name": "Ivana",
     "patient_surname": "Mitrovic",
     "patient_age": 65,
-    "patient_status": "Stable",
-    "patient_priority": 3,
-    "patient_address": 5,
+    "patient_status": "Less Urgent",
+    "patient_priority": 4,
+    "patient_address": "Donja 2",
     "patient_description": "Patient arrived after a minor traffic accident and is under observation for possible concussion."
   }]

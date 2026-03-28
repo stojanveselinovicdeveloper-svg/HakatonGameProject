@@ -7,3 +7,8 @@ obj_car_screens.i2_hasANUMBER = false;
 obj_car_screens.i2_text = "";
 obj_car_screens.i22_hasANUMBER = false;
 obj_car_screens.i22_text = "";
+
+obj_car_screens.n2_hasANUMBER = false;
+obj_car_screens.n2_text = "";
+obj_car_screens.n22_hasANUMBER = false;
+obj_car_screens.n22_text = "";

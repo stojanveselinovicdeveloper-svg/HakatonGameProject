@@ -2,6 +2,7 @@ event_inherited();
 
 if (!is_open) exit;
 
+draw_set_font(fnt_press_start_menu);
 // scale
 var scale = current_scale;
 
@@ -67,11 +68,11 @@ if (selected_bed != -1) {
 
     draw_set_color(c_white);
 
-    if (patient == noone) {
+    if (patient == noone) { 
         draw_text(draw_x + 30, split_y + 30, "Bed is empty");
     } else {
-        draw_text(draw_x + 30, split_y + 30, "Name: " + patient.name);
-        draw_text(draw_x + 30, split_y + 70, "Condition: " + patient.condition);
+        draw_text(draw_x + 30, split_y + 30, "Name: " + patient.patient_name + " " + patient.patient_surname);
+        draw_text(draw_x + 30, split_y + 70, "Condition: " + patient.patient_status);
     }
 }
 //DRAW BUTTON

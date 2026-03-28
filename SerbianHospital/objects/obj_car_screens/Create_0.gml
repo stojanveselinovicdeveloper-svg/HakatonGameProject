@@ -1,10 +1,10 @@
 event_inherited();
 //Button For Car 1 (or button 1)
-b1_rel_x = 0.6; // 60% from left
-b1_rel_y = 0.1; // 10% from top
+b1_rel_x = 0.2;
+b1_rel_y = 0.1; // above first row
 
-b1_rel_w = 0.3; // 30% of window width
-b1_rel_h = 0.15; // 15% of window height
+b1_rel_w = 0.6; // spans across both inputs
+b1_rel_h = 0.1;
 
 b1_hover = false;
 b1_text = "Send car 1";
@@ -12,55 +12,87 @@ b1_clicked = false;
 
 
 //Button For Car 2 (or button 2)
-b2_rel_x = 0.6; // 60% from left
-b2_rel_y = 0.6; // 60% from top
+b2_rel_x = 0.2;
+b2_rel_y = 0.55; // above second car section
 
-b2_rel_w = 0.3; // 30% of window width
-b2_rel_h = 0.15; // 15% of window height
+b2_rel_w = 0.6;
+b2_rel_h = 0.1;
 
 b2_hover = false;
 b2_text = "Send car 2";
 b2_clicked = false;
 
-//House number input box 1 (for car 1)
-i1_rel_x = 0.6; // 60% from left
-i1_rel_y = 0.3; // 30% from top
+//House number input boxes 1 (for car 1)
+n1_rel_x = 0.2;
+n1_rel_y = 0.25;
+n1_rel_w = 0.25;
+n1_rel_h = 0.12;
 
-i1_rel_w = 0.3; // 30% of window width
-i1_rel_h = 0.15; // 15% of window height
+i1_rel_x = 0.55;
+i1_rel_y = 0.25;
+i1_rel_w = 0.25;
+i1_rel_h = 0.12;
+
+n1_active = false;
+n1_text = "";
+n1_hasANUMBER = false;
 
 i1_active = false;
 i1_text = "";
 i1_hasANUMBER = false;
 
 //House number input box 2 (for car 1)
-i11_rel_x = 0.2; // 20% from left
-i11_rel_y = 0.3; // 30% from top
+n11_rel_x = 0.2;
+n11_rel_y = 0.4;
+n11_rel_w = 0.25;
+n11_rel_h = 0.12;
 
-i11_rel_w = 0.3; // 30% of window width
-i11_rel_h = 0.15; // 15% of window height
+i11_rel_x = 0.55;
+i11_rel_y = 0.4;
+i11_rel_w = 0.25;
+i11_rel_h = 0.12;
+
+n11_active = false;
+n11_text = "";
+n11_hasANUMBER = false;
 
 i11_active = false;
 i11_text = "";
 i11_hasANUMBER = false;
 
 //House number input box 1 (for car 2)
-i2_rel_x = 0.6; // 60% from left
-i2_rel_y = 0.8; // 80% from top
+n2_rel_x = 0.2;
+n2_rel_y = 0.7;
+n2_rel_w = 0.25;
+n2_rel_h = 0.12;
 
-i2_rel_w = 0.3; // 30% of window width
-i2_rel_h = 0.15; // 15% of window height
+i2_rel_x = 0.55;
+i2_rel_y = 0.7;
+i2_rel_w = 0.25;
+i2_rel_h = 0.12;
+
+n2_active = false;
+n2_text = "";
+n2_hasANUMBER = false;
 
 i2_active = false;
 i2_text = "";
 i2_hasANUMBER = false;
 
 //House number input box 2 (for car 2)
-i22_rel_x = 0.2; // 60% from left
-i22_rel_y = 0.8; // 80% from top
+n22_rel_x = 0.2;
+n22_rel_y = 0.85;
+n22_rel_w = 0.25;
+n22_rel_h = 0.12;
 
-i22_rel_w = 0.3; // 30% of window width
-i22_rel_h = 0.15; // 15% of window height
+i22_rel_x = 0.55;
+i22_rel_y = 0.85;
+i22_rel_w = 0.25;
+i22_rel_h = 0.12;
+
+n22_active = false;
+n22_text = "";
+n22_hasANUMBER = false;
 
 i22_active = false;
 i22_text = "";
