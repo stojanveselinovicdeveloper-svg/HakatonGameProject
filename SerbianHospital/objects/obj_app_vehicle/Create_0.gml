@@ -1,2 +1,2 @@
 event_inherited();
-app = obj_vehicle_display;
+app_type = obj_vehicle_display;

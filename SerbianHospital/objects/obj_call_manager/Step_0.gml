@@ -1,4 +1,4 @@
-if (!disabled &&!call_in_progress && !call_pending && patients_in_progress < call_limit) {
+if (!disabled &&!call_in_progress && !call_pending && patients_in_progress <= call_limit) {
     next_call_timer--;
 
     if (next_call_timer <= 0) {
