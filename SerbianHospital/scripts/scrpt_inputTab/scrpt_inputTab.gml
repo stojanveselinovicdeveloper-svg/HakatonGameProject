@@ -23,6 +23,7 @@ function scrpt_inputTab( input_rel_x,input_rel_y,  input_rel_w, input_rel_h, inp
 	if (mouse_check_button_pressed(mb_left)) {
 	    if (point_in_rectangle(mx, my, ix, iy, ix + iw, iy + ih)) {
 	        input_active = true;
+			audio_play_sound(snd_click, 10, false);
 	    } else {
 	        input_active = false;
 	    }
@@ -38,6 +39,7 @@ function scrpt_inputTab( input_rel_x,input_rel_y,  input_rel_w, input_rel_h, inp
 	        for (var i = ord("0"); i <= ord("Z"); i++) {
 	            if (keyboard_check_pressed(i) && string_length(input_text) < 10) {
 	                input_text += string_lower(chr(i));
+					audio_play_sound(snd_keyboard_type, 5, false);
 					hasANumber = true;
 	            }
 	        }
@@ -45,6 +47,7 @@ function scrpt_inputTab( input_rel_x,input_rel_y,  input_rel_w, input_rel_h, inp
 	        //space (optional, for full names and address)
 	        if (keyboard_check_pressed(vk_space) && string_length(input_text) < 10) {
 	           input_text += " ";
+			   audio_play_sound(snd_keyboard_type, 5, false);
 	       }
 
 	        // backspace
@@ -52,7 +55,8 @@ function scrpt_inputTab( input_rel_x,input_rel_y,  input_rel_w, input_rel_h, inp
 	            if (string_length(input_text) > 0) {
 	                input_text = string_delete(input_text, string_length(input_text), 1);
 					 hasANumber = false;
-	            }
+					audio_play_sound(snd_keyboard_type, 5, false);
+				}
 	        }
 	}
 	return [input_active,input_text, hasANumber];
