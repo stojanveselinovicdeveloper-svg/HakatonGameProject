@@ -31,7 +31,7 @@ for(var i = 0; i<5; i++){
 								pickedup = true;
 								obj_kuce.residents[kuca][i] = noone;
 								break;
-							}
+							}}
 					//no room in room
 						if(obj_kuce.residents[kuca][i]  != noone){
 							//Tu ce biti neki notification da se ne moze smesititi pacijent i - bodovi
@@ -41,9 +41,8 @@ for(var i = 0; i<5; i++){
 							scrpt_removePatientCall(curr);
 							obj_kuce.residents[kuca][i] = noone;
 						}
-					}
 				}
-			}
+		}
 		}
 	}
 }
@@ -73,11 +72,11 @@ if location2 != 0{
 					for (var j = 0; j < 6; j++) {
 						if global.beds[j] == noone {
 							scrpt_removePatientCall(curr);
-							global.beds[j] = new Patient(name, status) ;
+							global.beds[j] = curr;
 							pickedup = true;
 							obj_kuce.residents[kuca][i] = noone;
 							break;
-						}
+						}}
 				//no room in room
 					if(obj_kuce.residents[kuca][i]  != noone){
 						//Tu ce biti neki notification da se ne moze smesititi pacijent i - bodovi
@@ -87,7 +86,6 @@ if location2 != 0{
 						scrpt_removePatientCall(curr);
 						obj_kuce.residents[kuca][i] = noone;
 					}
-				}
 			}
 		}
 	}
@@ -99,4 +97,3 @@ name1 = 0;
 name2 = 0;
 location_curr = 0;
 can_send = true;
-

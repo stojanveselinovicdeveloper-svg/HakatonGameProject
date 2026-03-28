@@ -114,4 +114,16 @@ if b2_clicked && obj_car2.can_send{
 	}
 }
 
+//Timers
+if b1_clicked{
+	with(obj_car1){
+		other.b1_text = "Returning in: " + string(alarm_get(3)/60);
+	}
+}
+if b2_clicked{
+	with(obj_car2){
+		other.b2_text = "Returning in: " + string(alarm_get(3)/60);
+	}
+}
+
 UpdateGlobal();

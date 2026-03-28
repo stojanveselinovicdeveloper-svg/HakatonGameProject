@@ -7,7 +7,7 @@
   "managed":true,
   "name":"obj_button_options",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_base_button","path":"objects/obj_base_button/obj_base_button.yy",},"propertyId":{"name":"button_text","path":"objects/obj_base_button/obj_base_button.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Options",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_base_button","path":"objects/obj_base_button/obj_base_button.yy",},"propertyId":{"name":"button_text","path":"objects/obj_base_button/obj_base_button.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Challenges",},
   ],
   "parent":{
     "name":"UI",

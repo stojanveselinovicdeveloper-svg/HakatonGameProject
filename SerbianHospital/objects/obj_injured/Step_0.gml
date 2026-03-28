@@ -1,6 +1,6 @@
 if(patient_init && !countdownInit){
 	var time = scrpt_lifeTime(patient_priority);
-	alarm_set(0, 60*10*time);
+	alarm_set(0, 60*time);
 	countdownInit = true;
 }
 

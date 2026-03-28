@@ -19,6 +19,8 @@ var win_h = TAB_H;
 scrpt_inputTabDraw(i1_rel_x, i1_rel_y, i1_rel_w, i1_rel_h, i1_active, i1_text, "House No.");
 scrpt_inputTabDraw(n1_rel_x, n1_rel_y, n1_rel_w, n1_rel_h, n1_active, n1_text, "Name");
 
+
+
 scrpt_inputTabDraw(i11_rel_x, i11_rel_y, i11_rel_w, i11_rel_h, i11_active, i11_text,  "House No.");
 scrpt_inputTabDraw(n11_rel_x, n11_rel_y, n11_rel_w, n11_rel_h, n11_active, n11_text,  "Name");
 
