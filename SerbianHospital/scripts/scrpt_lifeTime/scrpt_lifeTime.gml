@@ -1,14 +1,14 @@
 function scrpt_lifeTime(prio){
 	switch prio {
 		case 1:
-			return 5;
+			return 70;
 		case 2:
-			return 7;
+			return 100;
 		case 3:
-			return 15;
+			return 130;
 		case 4:
-			return 20;
+			return 150;
 		case 5:
-			return 25;
+			return 200;
 	}
 }
