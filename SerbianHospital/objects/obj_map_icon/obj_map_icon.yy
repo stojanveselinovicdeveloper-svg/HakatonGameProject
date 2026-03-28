@@ -3,6 +3,7 @@
   "%Name":"obj_map_icon",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"obj_map_icon",
@@ -11,7 +12,10 @@
     "name":"Dispatch",
     "path":"folders/Objects/Dispatch.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_app_base",
+    "path":"objects/obj_app_base/obj_app_base.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

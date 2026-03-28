@@ -13,7 +13,7 @@ pickup_timer_max = game_get_speed(gamespeed_fps) * 9;
 call_progress_timer = irandom_range(pickup_timer_min,pickup_timer_max);
 caller_screen_popup = noone;
 call_priority = 5;
-call_limit = 6;
+call_limit = 10;
 
 // Data related
 var active_len = array_length(global.active_patients);

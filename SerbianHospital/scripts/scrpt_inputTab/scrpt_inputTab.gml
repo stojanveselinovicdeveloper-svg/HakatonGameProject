@@ -1,4 +1,4 @@
-function scrpt_inputTab( input_rel_x,input_rel_y,  input_rel_w, input_rel_h, input_active, input_text, hasANumber){
+function scrpt_inputTab( input_rel_x,input_rel_y,  input_rel_w, input_rel_h, input_active, input_text, hasANumber, input_type){
 	var mx = mouse_x;
 	var my = mouse_y;
 	var scale = current_scale;
@@ -28,22 +28,32 @@ function scrpt_inputTab( input_rel_x,input_rel_y,  input_rel_w, input_rel_h, inp
 	    }
 	}
 
-	// --- KEYBOARD INPUT (only if active) ---
+	
+	// --- KEYBOARD INPUT ---
 	if (input_active) {
-	    // numbers (top row)
-	    for (var i = ord("1"); i <= ord("6"); i++) {
-	        if (keyboard_check_pressed(i) && !hasANumber) {
-	            input_text += chr(i);
-				hasANumber = true;
+
+	    //INPUT (letters only, auto lowercase)
+
+	        // A–Z input
+	        for (var i = ord("0"); i <= ord("Z"); i++) {
+	            if (keyboard_check_pressed(i) && string_length(input_text) < 10) {
+	                input_text += string_lower(chr(i));
+					hasANumber = true;
+	            }
 	        }
-	    }
-	    // backspace
-	    if (keyboard_check_pressed(vk_backspace)) {
-	        if (string_length(input_text) > 0) {
-	            input_text = string_delete(input_text, string_length(input_text), 1);
-				hasANumber = false;
+
+	        //space (optional, for full names and address)
+	        if (keyboard_check_pressed(vk_space) && string_length(input_text) < 10) {
+	           input_text += " ";
+	       }
+
+	        // backspace
+	        if (keyboard_check_pressed(vk_backspace)) {
+	            if (string_length(input_text) > 0) {
+	                input_text = string_delete(input_text, string_length(input_text), 1);
+					 hasANumber = false;
+	            }
 	        }
-	    }
 	}
 	return [input_active,input_text, hasANumber];
 }
