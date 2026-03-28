@@ -1,2 +1,2 @@
 event_inherited();
-app = obj_car_screens;
+app_type = obj_car_screens;

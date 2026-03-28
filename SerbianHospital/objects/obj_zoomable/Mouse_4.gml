@@ -1,5 +1,3 @@
-event_inherited();
-
 if (!disabled){
 	zooming = true;
 
