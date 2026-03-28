@@ -1,5 +1,7 @@
 event_inherited();
 
+if (!is_open) exit;
+
 var mx = mouse_x;
 var my = mouse_y;
 
@@ -20,7 +22,7 @@ var bed_w = 160 * scale;
 var bed_h = 100 * scale;
 var spacing = 40 * scale;
 
-var rows = ceil(array_length(global.beds) / cols);
+var rows = ceil(array_length(beds) / cols);
 
 var total_w = cols * bed_w + (cols - 1) * spacing;
 var total_h = rows * bed_h + (rows - 1) * spacing;
@@ -47,7 +49,7 @@ if (mouse_check_button_pressed(mb_left)) {
 //DISCHARGE BUTTON
 if (selected_bed != -1) {
 
-    var patient = global.beds[selected_bed];
+    var patient = beds[selected_bed];
 
     if (patient != noone) {
 
@@ -59,9 +61,8 @@ if (selected_bed != -1) {
 
         if (mouse_check_button_pressed(mb_left)) {
             if (point_in_rectangle(mouse_x, mouse_y, btn_x, btn_y, btn_x + btn_w, btn_y + btn_h)) {
-				audio_play_sound(snd_click, 10, false);
                 patient.released = true;
-                global.beds[selected_bed] = noone;
+                beds[selected_bed] = noone;
             }
         }
     }

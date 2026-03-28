@@ -3,7 +3,7 @@ event_inherited();
 if (!is_open){
 	exit;
 } 
-visible = true;
+
 var scale = current_scale;
 
 var TAB_W = 960 * scale;

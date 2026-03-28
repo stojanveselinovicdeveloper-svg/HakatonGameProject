@@ -17,7 +17,7 @@
     "name":"obj_app_display",
     "path":"objects/obj_app_display/obj_app_display.yy",
   },
-  "persistent":false,
+  "persistent":true,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
   "physicsFriction":0.2,
