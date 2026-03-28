@@ -4,7 +4,8 @@ remove_app(popup);
 popup.target_scale = 0;
 target_scale = 0;
 if (instance_exists(popup.icon)){
-	refresh_right_side_ui();
+	popup.icon.click_timer_delay = 1;
+	//refresh_right_side_ui();
 }
 popup.alarm[0] = game_get_speed(gamespeed_fps) * 1;
 

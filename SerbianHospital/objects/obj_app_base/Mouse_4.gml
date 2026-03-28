@@ -28,7 +28,7 @@ function open_app() {
 		}
 		
 		save_app(app, position);
-		refresh_right_side_ui();
+		//refresh_right_side_ui();
 	
 		var block_app_ui = (max_tabs == 2 && position != 1440) || max_tabs == 1;
 		global.ui_blocking = block_app_ui;
@@ -51,7 +51,7 @@ function close_app(){
 	var open_apps_len = array_length(global.open_apps);
 	if (instance_exists(app) && open_apps_len > 0) {
 		remove_app(app);
-		refresh_right_side_ui();
+		//refresh_right_side_ui();
 
 		if (app.position == 480){
 			global.ui_blocking = false;
@@ -135,7 +135,7 @@ function close_existing_app() {
 			instance_destroy();
 		};
 		remove_app(inst);
-		refresh_right_side_ui();
+		//refresh_right_side_ui();
 		break;
 	}
 }
