@@ -24,14 +24,16 @@ for(var i = 0; i<5; i++){
 					var name = obj_kuce.residents[kuca][i].patient_name;
 					var status = obj_kuce.residents[kuca][i].patient_status;
 					//adding patient
+					with(obj_tab_patient_room){
 						for (var j = 0; j < 6; j++) {
-							if global.beds[j] == noone {
+							if beds[j] == noone {
 								scrpt_removePatientCall(curr);
-								global.beds[j] = curr;
+								beds[j] = curr;
 								pickedup = true;
 								obj_kuce.residents[kuca][i] = noone;
 								break;
 							}
+					}
 					//no room in room
 						if(obj_kuce.residents[kuca][i]  != noone){
 							//Tu ce biti neki notification da se ne moze smesititi pacijent i - bodovi
@@ -70,14 +72,16 @@ if location2 != 0{
 				var name = obj_kuce.residents[kuca][i].patient_name;
 				var status = obj_kuce.residents[kuca][i].patient_status;
 				//adding patient
+				with(obj_tab_patient_room){
 					for (var j = 0; j < 6; j++) {
-						if global.beds[j] == noone {
+						if beds[j] == noone {
 							scrpt_removePatientCall(curr);
-							global.beds[j] = new Patient(name, status) ;
+							beds[j] = new Patient(name, status) ;
 							pickedup = true;
 							obj_kuce.residents[kuca][i] = noone;
 							break;
 						}
+				}
 				//no room in room
 					if(obj_kuce.residents[kuca][i]  != noone){
 						//Tu ce biti neki notification da se ne moze smesititi pacijent i - bodovi
@@ -99,4 +103,3 @@ name1 = 0;
 name2 = 0;
 location_curr = 0;
 can_send = true;
-

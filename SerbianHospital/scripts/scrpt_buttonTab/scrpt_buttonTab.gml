@@ -27,7 +27,6 @@ function scrpt_buttonTab(rel_x, rel_y, rel_w, rel_h, button_hover, text, button_
 	if (button_hover && mouse_check_button_pressed(mb_left) && !button_clicked) {
 	  show_debug_message("Button clicked!");
 	  button_clicked = true;
-	  audio_play_sound(snd_click, 10, false);
 	  text = "Car sent";  
 	 
 }

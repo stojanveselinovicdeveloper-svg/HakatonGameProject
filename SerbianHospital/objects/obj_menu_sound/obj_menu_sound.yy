@@ -1,21 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"obj_car2",
+  "%Name":"obj_menu_sound",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_car2",
+  "name":"obj_menu_sound",
   "overriddenProperties":[],
   "parent":{
-    "name":"Dispatch",
-    "path":"folders/Objects/Dispatch.yy",
+    "name":"Effects",
+    "path":"folders/Objects/Effects.yy",
   },
-  "parentObjectId":{
-    "name":"obj_car_base",
-    "path":"objects/obj_car_base/obj_car_base.yy",
-  },
+  "parentObjectId":null,
   "persistent":true,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -33,10 +30,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_car",
-    "path":"sprites/spr_car/spr_car.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

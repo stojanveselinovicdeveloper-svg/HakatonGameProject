@@ -1,17 +1,14 @@
 // Inherit the parent event
 event_inherited();
-validAddress(location1);
-validAddress(location2);
-
 show_debug_message("Car 2 arrived")
-global.b2_text = "Send car 2";
-global.b2_clicked = false;
-global.i2_hasANUMBER = false;
-global.i2_text = "";
-global.i22_hasANUMBER = false;
-global.i22_text = "";
+obj_car_screens.b2_text = "Send car 2";
+obj_car_screens.b2_clicked = false;
+obj_car_screens.i2_hasANUMBER = false;
+obj_car_screens.i2_text = "";
+obj_car_screens.i22_hasANUMBER = false;
+obj_car_screens.i22_text = "";
 
-global.n2_hasANUMBER = false;
-global.n2_text = "";
-global.n22_hasANUMBER = false;
-global.n22_text = "";
+obj_car_screens.n2_hasANUMBER = false;
+obj_car_screens.n2_text = "";
+obj_car_screens.n22_hasANUMBER = false;
+obj_car_screens.n22_text = "";
